@@ -22,12 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 movies
             } = hero;
 
-            let movieList;
-            if (movies) {
-                movieList = movies.join("<br>");
-            } else {
-                movieList = 'No movies';
-            }
+            const movieList = movies ? movies.join("<br>") : 'No movies';
 
             const photoPath = './' + photo;
             const div = document.createElement('div');
@@ -124,7 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'GET'
             })
                 .then(response => response.json())
-                .then(data => renderData(data));
+                .then(data => renderData(data))
+                .catch(err => console.log(err));
         };
 
         getData('./dbHeroes.json');

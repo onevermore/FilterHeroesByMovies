@@ -183,6 +183,8 @@ transform: rotateY(180deg);
    width: 100%;
    height: 100%; 
    padding-bottom: 5px;
+   padding-left: 0.2px;
+   padding-right: 0.2px;
  }
 
  .hero-element:hover .first{
@@ -195,7 +197,7 @@ transform: rotateY(180deg);
 
 
 select {
-  font-size: 1.4em;
+  font-size: 1.6em;
   max-width: 350px;
 }
 
